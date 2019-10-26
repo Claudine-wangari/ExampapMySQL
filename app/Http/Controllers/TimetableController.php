@@ -9,6 +9,7 @@ class TimetableController extends Controller
 {
     public function extract(Request $request)
     {
+        // TODO Count a timetable as one for rows extracted.
         $class = collect(array_map('str_getcsv', file($request->timetable)));
         $class = $class->slice(3, 15);
 
@@ -20,6 +21,7 @@ class TimetableController extends Controller
             foreach ($day as $time => $code) {
                 if ($time < 1) continue; // Skip First Slot as it contains the day not a unit
                 if ($code) {
+
                     Timetable::create($request->toArray() + [
                             'unit_name' => $units[$key][$time],
                             'unit_code' => $code,
@@ -27,6 +29,7 @@ class TimetableController extends Controller
                             'time' => $time,
                             'lecturer' => $lecturers[$key][$time],
                         ]);
+
                 }
             }
         }

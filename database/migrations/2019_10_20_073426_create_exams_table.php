@@ -15,9 +15,10 @@ class CreateExamsTable extends Migration
     {
         Schema::create('exams', function (Blueprint $table) {
 
-            $table->string('examination');
             $table->date('date');
-            $table->string('time');
+            $table->string('unit_name_code');
+            $table->string('start_time');
+            $table->string('stop_time');
             $table->string('group');
             $table->string('venue');
         });

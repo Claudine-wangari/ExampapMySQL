@@ -16,8 +16,8 @@ class CreateUnitsTable extends Migration
         Schema::create('units', function (Blueprint $table) {
             $table->string('unit_name');
             $table->string('unit_code');
-            $table->string('faculty');
-            $table->boolean('status'); // on offer or not
+//            $table->string('faculty');
+            $table->boolean('status')->nullable(); // on offer or not
             $table->timestamps();
         });
     }

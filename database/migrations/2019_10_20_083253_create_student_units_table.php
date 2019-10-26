@@ -11,14 +11,17 @@ class CreateStudentUnitsTable extends Migration
      *
      * @return void
      */
+
+    // Assumption pre-filled
+    // TODO Create a seeder(9scenarios)
     public function up()
     {
         Schema::create('student_units', function (Blueprint $table) {
             $table->integer('student_number');
             $table->string('unit_code');
-            $table->boolean('status'); // pass or fail
-            $table->string('class'); // dependent on column status(Repeat,Retake,Special)
-            $table->integer('marks');
+            $table->boolean('status')->nullable(); // dependent on marks pass or fail
+            $table->string('class')->nullable(); // dependent on column marks(Repeat,Retake,Special)
+            $table->float('marks');
             $table->timestamps();
         });
     }

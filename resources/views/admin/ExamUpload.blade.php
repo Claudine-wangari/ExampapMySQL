@@ -8,12 +8,6 @@
                     <form action="/exam" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="pub">Faculty:</label>
-                            <input type="text" class="form-control-file" name="faculty" id="faculty"><br>
-
-                            <label for="pub">Year of Study</label>
-                            <input type="number" class="form-control-file" name="study_year" id="year"><br>
-
                             <label for="pub">Cohort start</label>
                             <input type="text" class="form-control-file" name="session_start" id="start"><br>
 

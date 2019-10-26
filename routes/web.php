@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,13 @@ Auth::routes();
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::post('/login', function (){
+    return view('auth.login');
+});
+
+Route::post('/login', 'UserController@login');
+
 
 Route::get('/timetable', function () {
     return view('admin.TimetableUpload');

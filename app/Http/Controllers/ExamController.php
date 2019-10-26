@@ -16,23 +16,24 @@ class ExamController extends Controller
 {
     public function extract(Request $request)
     {
-        $class = collect(array_map('str_getcsv', file($request->exam)));
-        $class = $class->slice(3, 15);
-
-        $codes = $class->nth(3);
-        $units = $class->slice(1)->nth(3);
-        $lecs = $class->slice(2)->nth(3);
-
-        foreach ($codes as $code) {
-            $string = '';
-            foreach ($code as $time => $x) {
-                if ($x != "") {
-                    $string .= $x . ' ' . $time . ' ';
-                }
-            }
-            echo $string . "</br>";
+        $path = $request->file('exam')->store('exams');
+        $PDFParser = new Parser();
+    try
+    {
+        $pdf = $PDFParser->parseFile(storage_path('app/' . $path));
+        $pages  = $pdf->getPages();
+        foreach ($pages as $page)
+        {
+            $required =$page->getTextArray();
+            dd($required);
 
         }
+    }
+    catch (Exception $exception)
+    {
+        return $exception;
+    }
+     return "$page". "=>" ."$page->getText()" ."\n";
     }
 }
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class AdministratorTableSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,44 +12,45 @@ class AdministratorTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('administrators')->insert([
-            'email' => 'icsadmin@strathmore.edu',
-            'password' => bcrypt('icsAdmin'),
-            'faculty' => 'FIT ICS',
-            'role' => 'Course Administrator',
+        DB::table('users')->insert([
+            'email' => 'claudine.gachiri@strathmore.edu',
+            'password' => bcrypt('Claudine@1234'),
+            'role' => 'student',
         ]);
 
-        DB::table('administrators')->insert([
-            'email' => 'bbitadmin@strathmore.edu',
-            'password' => bcrypt('bbitAdmin'),
-            'faculty' => 'FIT BBIT',
-            'role' => 'Course Administrator',
-        ]);
-        DB::table('administrators')->insert([
-            'email' => 'btcadmin@strathmore.edu',
-            'password' => bcrypt('btcAdmin'),
-            'faculty' => 'FIT BTC',
-            'role' => 'Course Administrator',
-        ]);
-
-        DB::table('administrators')->insert([
-            'email' => 'lawadmin@strathmore.edu',
-            'password' => bcrypt('lawAdmin'),
-            'faculty' => 'LAW',
-            'role' => 'Course Administrator',
-        ]);
-
-        DB::table('administrators')->insert([
+        DB::table('users')->insert([
             'email' => 'fitdean@strathmore.edu',
             'password' => bcrypt('facultyDean'),
-            'faculty' => 'FIT',
             'role' => 'Faculty Dean',
         ]);
 
-        DB::table('administrators')->insert([
+        DB::table('users')->insert([
+            'email' => 'icsadmin@strathmore.edu',
+            'password' => bcrypt('icsAdmin'),
+            'role' => 'Course Administrator',
+        ]);
+
+        DB::table('users')->insert([
+            'email' => 'bbitadmin@strathmore.edu',
+            'password' => bcrypt('bbitAdmin'),
+            'role' => 'Course Administrator',
+        ]);
+
+        DB::table('users')->insert([
+            'email' => 'btcadmin@strathmore.edu',
+            'password' => bcrypt('btcAdmin'),
+            'role' => 'Course Administrator',
+        ]);
+
+        DB::table('users')->insert([
+            'email' => 'lawadmin@strathmore.edu',
+            'password' => bcrypt('lawAdmin'),
+            'role' => 'Course Administrator',
+        ]);
+
+        DB::table('users')->insert([
             'email' => 'aRegistrar@strathmore.edu',
             'password' => bcrypt('academicRegistrar'),
-            'faculty' => 'General',
             'role' => 'Academic Registrar',
         ]);
     }

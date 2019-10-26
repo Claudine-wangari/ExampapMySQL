@@ -16,7 +16,7 @@ class CreateTimetablesTable extends Migration
         Schema::create('timetables', function (Blueprint $table) {
             $table->increments('timetable_id');
             $table->string('faculty')->nullable();
-            $table->string('study_year')->nullable();
+            $table->string('study_year')->nullable();// TODO ADD A DELIMETER A HYPHEN
             $table->string('session_start')->nullable();
             $table->string('session_end')->nullable();
             $table->string('unit_name')->nullable();
