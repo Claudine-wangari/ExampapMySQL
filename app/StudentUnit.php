@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudentUnit extends Model
 {
-    protected $table= "student_units";
+    protected $table = "student_units";
 
     public function student()
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Student::class, 'student_number', 'student_number');
     }
 
-    public function Unit()
+    public function unit()
     {
-        return $this->hasMany(Unit::class);
+        return $this->hasMany(Unit::class, 'unit_code', 'unit_code');
     }
 }

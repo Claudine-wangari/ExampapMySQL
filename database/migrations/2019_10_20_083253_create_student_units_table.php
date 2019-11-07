@@ -19,9 +19,9 @@ class CreateStudentUnitsTable extends Migration
         Schema::create('student_units', function (Blueprint $table) {
             $table->integer('student_number');
             $table->string('unit_code');
-            $table->boolean('status')->nullable(); // dependent on marks pass or fail
+            $table->string('status')->nullable(); // dependent on marks pass or fail
             $table->string('class')->nullable(); // dependent on column marks(Repeat,Retake,Special)
-            $table->float('marks');
+            $table->float('marks')->nullable();
             $table->timestamps();
         });
     }

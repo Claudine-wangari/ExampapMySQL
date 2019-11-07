@@ -11,12 +11,15 @@ class CreateUnitsTable extends Migration
      *
      * @return void
      */
+
+    // TODO edit units seeder.
     public function up()
     {
         Schema::create('units', function (Blueprint $table) {
             $table->string('unit_name');
             $table->string('unit_code');
-//            $table->string('faculty');
+            $table->string('faculty');
+            $table->string('course')->nullable();
             $table->boolean('status')->nullable(); // on offer or not
             $table->timestamps();
         });

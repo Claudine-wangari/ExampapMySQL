@@ -33,15 +33,25 @@ Route::post('/login', function (){
 
 Route::post('/login', 'UserController@login');
 
-
-Route::get('/timetable', function () {
+Route::get('/timetable', function ()
+{
     return view('admin.TimetableUpload');
 });
 
-Route::post('/timetable', 'TimetableController@extract');
+Route::post('/timetable', 'TimetableController@update');
 
 Route::get('/exam', function () {
     return view('admin.ExamUpload');
 });
 
 Route::post('/exam', 'ExamController@extract');
+
+
+//Routes used by the Mobile App to display items.
+Route::get('/units', 'StudentUnitController@FailedUnits');
+
+Route::get('/repeats', 'StudentUnitController@Repeats');
+
+Route::get('/retakes', 'StudentUnitController@Retakes');
+
+Route::get('/specials', 'StudentUnitController@Specials');

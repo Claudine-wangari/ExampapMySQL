@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401afbde-8d36-4890-aec1-140f0dc3130a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ExamPap.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ExamPap.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Administrator.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Administrator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TimetableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TimetableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StudentUnitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StudentUnitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UnitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/StudentUnit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/StudentUnit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Timetable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Timetable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_073023_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_073023_create_students_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_073318_create_units_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_073318_create_units_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_073403_create_timetables_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_073403_create_timetables_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_073426_create_exams_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_073426_create_exams_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_073514_create_administrators_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_073514_create_administrators_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_10_20_083253_create_student_units_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_10_20_083253_create_student_units_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/AdministratorTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/AdministratorTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ExamUpload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ExamUpload.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StudentTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StudentTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StudentUnitTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StudentUnitTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UnitsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UnitsTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,6 +159,7 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
       <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
       <path value="$PROJECT_DIR$/vendor/tecnickcom/tcpdf" />
+      <path value="$PROJECT_DIR$/vendor/owen-it/laravel-auditing" />
     </include_path>
   </component>
   <component name="ProjectId" id="1SSQRCSWtJ6OrFjDveCZhZ0vzdE" />
@@ -166,7 +170,7 @@
     <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ExampapMySQL" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -226,7 +230,15 @@
       <workItem from="1571751335279" duration="14505000" />
       <workItem from="1571816296344" duration="9957000" />
       <workItem from="1571984293787" duration="54000" />
-      <workItem from="1571992797339" duration="34146000" />
+      <workItem from="1571992797339" duration="49997000" />
+      <workItem from="1572236222972" duration="4728000" />
+      <workItem from="1572260757251" duration="12068000" />
+      <workItem from="1572447259890" duration="2494000" />
+      <workItem from="1572573794337" duration="15000" />
+      <workItem from="1572588534042" duration="68000" />
+      <workItem from="1572698713796" duration="4287000" />
+      <workItem from="1572787030222" duration="12756000" />
+      <workItem from="1572870657176" duration="11932000" />
     </task>
     <servers />
   </component>
@@ -245,17 +257,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/TimetableController.php</url>
-          <line>35</line>
-          <option name="temporary" value="true" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

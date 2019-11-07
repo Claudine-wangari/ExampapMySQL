@@ -15,20 +15,23 @@ class AdministratorTableSeeder extends Seeder
         DB::table('administrators')->insert([
             'email' => 'icsadmin@strathmore.edu',
             'password' => bcrypt('icsAdmin'),
-            'faculty' => 'FIT ICS',
+            'faculty' => 'FIT',
+            'course' => 'ICS',
             'role' => 'Course Administrator',
         ]);
 
         DB::table('administrators')->insert([
             'email' => 'bbitadmin@strathmore.edu',
             'password' => bcrypt('bbitAdmin'),
-            'faculty' => 'FIT BBIT',
+            'faculty' => 'FIT',
+            'course' => 'BBIT',
             'role' => 'Course Administrator',
         ]);
         DB::table('administrators')->insert([
             'email' => 'btcadmin@strathmore.edu',
             'password' => bcrypt('btcAdmin'),
-            'faculty' => 'FIT BTC',
+            'faculty' => 'FIT',
+            'course'=> 'BTC',
             'role' => 'Course Administrator',
         ]);
 

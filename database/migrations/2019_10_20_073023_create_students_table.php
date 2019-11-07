@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('student_name');
             $table->string('email_address');
             $table->string('faculty');
+            $table->string('course')->nullable();
             $table->string('password');
             $table->timestamps();
         });

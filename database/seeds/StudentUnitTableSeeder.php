@@ -22,8 +22,6 @@ class StudentUnitTableSeeder extends Seeder
         DB::table('student_units')->insert([
             'student_number' => '094567',
             'unit_code' => 'ICS 4104',
-            'marks' => '53',
-
                     ]);
 
         DB::table('student_units')->insert([
@@ -43,8 +41,44 @@ class StudentUnitTableSeeder extends Seeder
         DB::table('student_units')->insert([
             'student_number' => '094567',
             'unit_code' => 'ICS 4106',
-            'marks' => '37.8',
+            'marks' => '35.9',
 
                     ]);
+
+
+
+
+        DB::table('student_units')->insert([
+            'student_number' => '094560',
+            'unit_code' => 'ICS 4103',
+            'marks' => '40',
+
+        ]);
+
+        DB::table('student_units')->insert([
+            'student_number' => '094560',
+            'unit_code' => 'ICS 4104',
+            'marks' => '80',
+        ]);
+
+        DB::table('student_units')->insert([
+            'student_number' => '094560',
+            'unit_code' => 'ICS 4102',
+        ]);
+
+        DB::table('student_units')->insert([
+            'student_number' => '094560',
+            'unit_code' => 'ICS 4105',
+            'marks' => '36.8',
+
+        ]);
+
+        DB::table('student_units')->insert([
+            'student_number' => '094560',
+            'unit_code' => 'ICS 4106',
+            'marks' => '39.2',
+
+        ]);
+
     }
 }

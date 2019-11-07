@@ -5,70 +5,71 @@ namespace App\Http\Controllers;
 use App\StudentUnit;
 use App\Unit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
 
 class StudentUnitController extends Controller
 {
 
-    // TODO: Updating the value of status and class for a unit
+ //Updating the value of status and class in table student_unit to determine what is to be displayed to the student.
     public function updateColumns()
     {
-        $query = StudentUnit::all();
-        $marks = $query->marks;
+        $query = DB::table('student_units')->get('marks');
 
-       if($marks)
+
+        $marks = StudentUnit::get();
+
+        $marks->map(function ($item) use ($query)
         {
-            switch ($marks)
+            if ($mark = $item->marks)
             {
-                case ">= 40":
-                    StudentUnit::update(['status' => 'pass']);
-                    break;
-                case ">=39 && <= 36":
-                    StudentUnit::update(['status' => 'fail','class' => 'Retake']);
-                    break;
-                case "<36":
-                    StudentUnit::update(['status' => 'fail','class' => 'Repeat']);
-                    break;
+                if ($mark >= (float)40)
+                {
+                    StudentUnit::where('marks', $mark)->update(['status' => 'pass']);
+                }
+                elseif ($mark <= (float)39 && $mark >= (float)36)
+                {
+                    StudentUnit::where('marks', $mark)->update(['status' => 'fail', 'class' => 'Retake']);
+                }
+                else
+                {
+                    StudentUnit::where('marks', $mark)->update(['status' => 'fail', 'class' => 'Repeat']);
+                }
             }
-        }
-       else
-       {
-           echo "";
-       }
-
-
-//        if($marks <= 40)
-//        {
-//            StudentUnit::update([
-//               'status' => 'pass'
-//            ]);
-//        }
-//        elseif
-//        {
-//            if($marks >=39 || $marks <=36)
-//            {
-//                StudentUnit::update([
-//
-//                ])
-//            }
-//        }
-
+            else
+            {
+                StudentUnit::where('marks', $mark)->update(['status' => 'Special','class' => 'Special' ]);
+            }
+        });
     }
 
-    public function APIfailedUnits()
+    public function FailedUnits()
     {
-        updateColumns();
-        $failed =DB::table('student_units')->where('status','=', 'fail');
-        if ($failed)
-        {
-            DB::table('student_units')
-                ->join('', 'users.id', '=', 'contacts.user_id')
-                ->join('orders', 'users.id', '=', 'orders.user_id')
-                ->select('users.id', 'contacts.phone', 'orders.price')
-                ->get();
-        }
+        $this->updateColumns();
+        $failed = StudentUnit::join('units','student_units.unit_code','=', 'units.unit_code')->select('student_units.student_number','units.unit_name','student_units.unit_code')->where('student_units.status', '!=', 'pass')->get();
+        return response()->json($failed);
+    }
 
+    public function Repeats()
+    {
+        $this->updateColumns();
+        $repeat = StudentUnit::join('units','student_units.unit_code','=', 'units.unit_code')->select('student_units.student_number','units.unit_name','student_units.unit_code')->where('student_units.class', '=', 'repeat')->get();
+        return response()->json($repeat);
+    }
 
+    public function Retakes()
+    {
+        $this->updateColumns();
+        $retake = StudentUnit::join('units','student_units.unit_code','=', 'units.unit_code')->select('student_units.student_number','units.unit_name','student_units.unit_code')->where('student_units.class', '=', 'retake')->get();
+        return response()->json($retake);
+    }
 
+    public function Specials()
+    {
+        $this->updateColumns();
+        $special = StudentUnit::join('units','student_units.unit_code','=', 'units.unit_code')->select('student_units.student_number','units.unit_name','student_units.unit_code')->where('student_units.status', '=', 'special')->get();
+        return response()->json($special);
     }
 }
